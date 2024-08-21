@@ -1,0 +1,45 @@
+name: Validate JSON Schemas
+on: 
+  push:
+    branches:
+      - main
+      - shapes-and-schemas
+  pull_request:
+    branches:
+      - main
+      - shapes-and-schemas
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    strategy: 
+      matrix:
+        folders:
+          - base/message
+          - issuance/message
+          - presentation/message
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout
+      #- name: Validate JSON Schema
+      #  uses: dsanders11/json-schema-validate-action@v1.1.2
+      
+      - name: Bash to execute the JSON Schema Checks
+        run: |
+          sudo pipx install check-jsonschema
+
+          for folder in ${{ matrix.folders }}
+          do
+            for json_file in $folder/example/*.json
+            do
+              _base_filename=$(basename "$json_file" .json)  # Remove .json extension
+              
+              schema_file="$folder/schema/${_base_filename}-schema.json"
+              
+              if [[ -f "$schema_file" ]]; then
+                echo "Validating $json_file against $schema_file"
+                check-jsonschema --schemafile "$schema_file" "$json_file"
+              else
+                echo "WARNING: Schema file not found for $json_file"
+              fi
+            done
+          done
