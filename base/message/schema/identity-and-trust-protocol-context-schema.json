@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Identity and Trust Protocol Context",
+    "type": "object",
+    "properties": {
+        "@context": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "uri"
+            },
+            "description": "A list of JSON-LD context URI"
+        }
+    },
+    "required": ["@context"]
+}

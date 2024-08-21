@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IssuerMetadata",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Specifies a set of valid Json-LD contexts"
+    },
+    "@type": {
+      "type": "string"
+    },
+    "credentialIssuer": {
+      "type": "string"
+    },
+    "credentialsSupported": {
+      "type": "array",
+      "items": {
+        "$ref": "./credential-object-schema.json"
+      }
+    }
+  },
+  "required": ["@context", "@type", "credentialIssuer"]
+}
