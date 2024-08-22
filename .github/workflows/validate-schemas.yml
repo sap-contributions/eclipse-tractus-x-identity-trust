@@ -37,7 +37,7 @@ jobs:
               
               if [[ -f "$schema_file" ]]; then
                 echo "Validating $json_file against $schema_file"
-                check-jsonschema --schemafile "$schema_file" "$json_file"
+                check-jsonschema --schemafile  "$schema_file" "$json_file" --verbose
               else
                 echo "WARNING: Schema file not found for $json_file"
               fi
