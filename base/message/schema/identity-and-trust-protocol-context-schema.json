@@ -9,7 +9,7 @@
                 "type": "string",
                 "format": "uri"
             },
-            "description": "A list of JSON-LD context URI- checking action"
+            "description": "A list of JSON-LD context URI"
         }
     },
     "required": ["@context"]
