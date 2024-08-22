@@ -17,13 +17,9 @@
             "action": "use",
             "constraint": [
               {
-                "and": [
-                  {
-                    "leftOperand": "https://w3id.org/tractusx-trust/CredentialPrereq",
-                    "operator": "eq",
-                    "rightOperand": "active"
-                  }
-                ]
+                "leftOperand": "https://w3id.org/tractusx-trust/CredentialPrereq",
+                "operator": "eq",
+                "rightOperand": "active"
               }
             ]
           }
