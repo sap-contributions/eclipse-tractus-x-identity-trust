@@ -13,6 +13,143 @@
     "CredentialContainer": "dcp:CredentialContainer",
     "CredentialMessage": "dcp:CredentialMessage",
     "PresentationQueryMessage": "dcp:PresentationQueryMessage",
+    "CredentialObject": "dcp:CredentialObject",
+    "IssuerMetadata": "dcp:IssuerMetadata",
+    "CredentialOfferMessage": "dcp:CredentialOfferMessage",
+    "CredentialRequestMessage": "dcp:CredentialRequestMessage",
+    "CredentialStatus": "dcp:CredentialStatus",
+    "PresentationResponseMessage": "dcp:PresentationResponseMessage",
+    "VerifiableCredential": "cred:VerifiableCredential",
+    "VerifiablePresentation": "cred:VerifiablePresentation",
+
+    "sub": {
+      "@id": "dcp:sub",
+      "@type": "xsd:string"
+    },
+    "iss": {
+      "@id": "dcp:iss",
+      "@type": "xsd:anyURI"
+    },
+    "iat": {
+      "@id": "dcp:iat",
+      "@type": "xsd:dateTime"
+    },
+    "exp": {
+      "@id": "dcp:exp",
+      "@type": "xsd:dateTime"
+    },
+    "jti": {
+      "@id": "dcp:jti",
+      "@type": "xsd:string"
+    },
+    "token": {
+      "@id": "dcp:token",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "dcp:id",
+      "@type": "@id"
+    },
+    "type": {
+      "@id": "dcp:type",
+      "@type": "xsd:string"
+    },
+    "verifiableCredential": {
+      "@id": "dcp:verifiableCredential",
+      "@type": "@id",
+      "@container": "@graph"
+    },
+    "credentialType": {
+      "@id": "dcp:credentialType",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "bindingMethods": {
+      "@id": "dcp:bindingMethods",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "cryptographicSuites": {
+      "@id": "dcp:cryptographicSuites",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "issuancePolicy": {
+      "@id": "dcp:issuancePolicy",
+      "@type": "@id"
+    },
+    "offerReason": {
+      "@id": "dcp:offerReason",
+      "@type": "xsd:string"
+    },
+    "credentialIssuer": {
+      "@id": "dcp:credentialIssuer",
+      "@type": "xsd:anyURI"
+    },
+    "credentialsSupported": {
+      "@id": "dcp:credentialsSupported",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "action": {
+      "@id": "dcp:action",
+      "@type": "xsd:string"
+    },
+    "constraint": {
+      "@id": "dcp:constraint",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "leftOperand": {
+      "@id": "dcp:leftOperand",
+      "@type": "xsd:string"
+    },
+    "operator": {
+      "@id": "dcp:operator",
+      "@type": "xsd:string"
+    },
+    "rightOperand": {
+      "@id": "dcp:rightOperand",
+      "@type": "xsd:string"
+    },
+    "requestId": {
+      "@id": "dcp:requestId",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "dcp:status",
+      "@type": "xsd:string"
+    },
+    "degree": {
+      "@id": "dcp:degree",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "dcp:name",
+      "@type": "xsd:string"
+    },
+    "issuer": {
+      "@id": "dcp:issuer",
+      "@type": "xsd:anyURI"
+    },
+    "credentialSubject": {
+      "@id": "dcp:credentialSubject",
+      "@type": "@id"
+    },
+    "issuanceDate": {
+      "@id": "dcp:issuanceDate",
+      "@type": "xsd:dateTime"
+    },
+    "presentation": {
+      "@id": "dcp:presentation",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "scope": {
+      "@id": "dcp:scope",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
     "payload": {
       "@id": "dcp:payload",
       "@type": "@id",
@@ -22,10 +159,6 @@
       "@id": "dcp:credentials",
       "@type": "@id",
       "@container": "@graph"
-    },
-    "scope": {
-      "@id": "dcp:scope",
-      "@type": "xsd:string"
     }
   }
 }
