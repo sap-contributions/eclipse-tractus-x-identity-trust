@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Self-Issued ID Token",
+    "type": "object",
+    "properties": {
+        "sub": {
+            "type": "string",
+            "description": "Subject identifier"
+        },
+        "iss": {
+            "type": "string",
+            "description": "Issuer identifier"
+        },
+        "iat": {
+            "type": "integer",
+            "description": "Issued at time (seconds since epoch)"
+        },
+        "exp": {
+            "type": "integer",
+            "description": "Expiration time (seconds since epoch)"
+        },
+        "jti": {
+            "type": "string",
+            "description": "JWT ID"
+        },
+        "token": {
+            "type": "string",
+            "description": "Opaque token for instance to access a VP from a Credential Service"
+        }
+    },
+    "required": ["sub", "iss", "iat", "exp", "jti"]
+}

@@ -1,0 +1,10 @@
+@prefix : <http://example.org/ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:VerifiablePresentation a schema:Thing ;
+    schema:name "Verifiable Presentation" ;
+    schema:description "A verifiable presentation" ;
+    :id [ a schema:Text ] ;
+    :type [ a schema:ItemList ; schema:itemListElement [ a schema:Text ] ] ;
+    :verifiableCredential [ a schema:ItemList ; schema:itemListElement [ a schema:Text ] ] .
