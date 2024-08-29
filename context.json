@@ -55,9 +55,12 @@
       "@type": "xsd:string"
     },
     "verifiableCredential": {
-      "@id": "dcp:verifiableCredential",
-      "@type": "@id",
-      "@container": "@graph"
+      "@id": "cred:verifiableCredential",
+      "@type": "@id"
+    },
+    "verifiablePresentation": {
+      "@id": "cred:verifiablePresentation",
+      "@type": "@id"
     },
     "credentialType": {
       "@id": "dcp:credentialType",
