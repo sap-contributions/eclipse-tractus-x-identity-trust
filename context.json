@@ -1,5 +1,6 @@
 {
   "@context": {
+    "@version": 1.1,
     "odrl": "http://www.w3.org/ns/odrl/2/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "cred": "https://www.w3.org/2018/credentials#",
@@ -22,26 +23,6 @@
     "VerifiableCredential": "cred:VerifiableCredential",
     "VerifiablePresentation": "cred:VerifiablePresentation",
 
-    "sub": {
-      "@id": "dcp:sub",
-      "@type": "xsd:string"
-    },
-    "iss": {
-      "@id": "dcp:iss",
-      "@type": "xsd:anyURI"
-    },
-    "iat": {
-      "@id": "dcp:iat",
-      "@type": "xsd:dateTime"
-    },
-    "exp": {
-      "@id": "dcp:exp",
-      "@type": "xsd:dateTime"
-    },
-    "jti": {
-      "@id": "dcp:jti",
-      "@type": "xsd:string"
-    },
     "token": {
       "@id": "dcp:token",
       "@type": "xsd:string"
